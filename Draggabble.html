@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Draggable</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="jquery-ui-themes-1.13.2/jquery-ui-themes-1.13.2/themes/base/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+   <script>
+    $(document).ready(function(){
+        $(".Div1").draggable();
+
+        $(".Div1").css("transition","all 3s");
+            var arr = ["#f00","#0f0","#00f"];
+            function changeColor(){
+        $(".Div1").css({
+            backgroundColor : arr[parseInt(Math.random() * 3)]
+         });
+}
+changeColor();
+setInterval(changeColor,3000);
+    });
+   </script>
+   <style>
+    .Div1:hover{
+        
+    }
+    .Div1
+    {
+        height: 100px;
+        width: 100px;
+        border: 4%;
+        margin-top: 5%;
+        background-color: cadetblue;
+    }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 col-lg-offset-4 col-lg-4">
+                    <div class="Div1">
+                        <marquee>
+                         <b>Intro To Draggable Elements</b>
+                        </marquee>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
